@@ -1,7 +1,7 @@
 <div align="center">
 <h1 align="center">
     <img src="https://miro.medium.com/v2/resize:fit:800/1*3gOnS8dkzrKSbpnJSdDuQg.png" width= "200px">
-    <br>Libft</br>
+    <br>Libft (is being updated)</br>
 </h1>
 <h3>Your very first own library</h3>
 <p align="center">
