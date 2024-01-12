@@ -48,7 +48,7 @@ Because of 42 School norm requirements: <br />
 | [ft_isprint](./ft_isprint.c) | Printing character test (space character inclusive) |
 | [ft_toupper](./ft_toupper.c) | Converts a lowercase alphabetic character to its uppercase equivalent. |
 | [ft_tolower](./ft_tolower.c) | Converts an uppercase alphabetic character to its lowercase equivalent. |
-| [ft_atoi](./)ft_atoi.c | Converts a string str to an integer value. It skips leading whitespace characters, handles an optional sign, and converts the remaining characters into an integer. |
+| [ft_atoi](./ft_atoi.c) | Converts a string str to an integer value. It skips leading whitespace characters, handles an optional sign, and converts the remaining characters into an integer. |
 | [ft_memset](./ft_memset.c) | Sets each byte of the memory block pointed to by str to the value c, up to a specified length n. It returns the pointer str after modifying the memory block. |
 | [ft_bzero](./ft_bzero) | Sets the first n bytes of the memory pointed to by s to zero. |
 | [ft_memcpy](./ft_memcpy.c) | Copies n bytes from the memory area pointed to by src to the memory area pointed to by dest. It returns a pointer to the destination memory area. |
