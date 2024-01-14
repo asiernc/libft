@@ -6,7 +6,7 @@
 /*   By: anovio-c <anovio-c@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:54:26 by anovio-c          #+#    #+#             */
-/*   Updated: 2024/01/12 16:01:49 by anovio-c         ###   ########.fr       */
+/*   Updated: 2024/01/14 12:32:21 by asinovio-c       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,24 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {
-	size_t	i;
+	char	*dst;
 
-	if (!dest && !src)
-		return (0);
-	i = 0;
-	if ((size_t)dest - (size_t)src < count)
+	dst = dest;
+	if (!dest || !src)
+		return (dest);
+	if (dest == src)
+		return (dest);
+	if (dest > src)
 	{
-		i = count - 1;
-		while (i >= 0)
-		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-			i--;
-		}
+		while (count--)
+			((char *)dest)[count] = ((char *)src)[count];
 	}
-	else
+	else if (dest < src)
 	{
-		while (i < count)
-		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-			i++;
-		}
+		while (count--)
+			*(char *)dest++ = *(char *)src++;
 	}
-	return (dest);
+	return (dst);
 }
 /*
 #include <stdio.h>
@@ -44,14 +39,14 @@ void	*ft_memmove(void *dest, const void *src, size_t count)
 
 int	main(void)
 {
-	char	src[] = "Hello, World!";
+	char	src[20] = "Hello, World!";
 	char	dest[20];
 
 	printf("Before the copy:\n");
 	printf("Src: %s\n", src);
 	printf("Dest: %s\n", dest);
 
-	ft_memmove(dest, src, strlen(src) + 1);
+	ft_memmove(src + 6, src, strlen(src) - 6);
 
 	printf("After the copy:\n");
 	printf("Src: %s\n", src);
